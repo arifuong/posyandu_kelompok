@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('nama');
             $table->date('tanggal_lahir');
             $table->string('alamat');
-            $table->integer('NIK');
+            $table->string('NIK');
             $table->string('Usia_kehamilan');
             $table->string('jumlah_kehamilan');
             $table->string('riwayat_persalinan_sebelumnya');
