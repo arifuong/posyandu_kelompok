@@ -120,6 +120,12 @@
                             user
                         </a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{route('jadwal')}}">
+                            <span data-feather="bar-chart-2"></span>
+                            jadwal
+                        </a>
+                    </li>
                 </ul>
             </div>
         </nav>
