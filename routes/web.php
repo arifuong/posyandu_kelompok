@@ -5,7 +5,9 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DataBayiController;
 use App\Http\Controllers\DataIbuController;
 use App\Http\Controllers\userController;
+
 use App\Http\Controllers\JadwalController;
+use App\Http\Controllers\DataUserController;
 
 
 Route::get('/', [userController::class, 'dataibu'])->name('cek/ibu');
@@ -36,9 +38,18 @@ Route::post('store/bayi', [DataBayiController::class, 'store'])->name('storeBayi
 Route::get('/data-bayi/{id}/edit', [DataBayiController::class, 'edit'])->name('data-bayi.edit');
 Route::post('/data-bayi/{id}/update', [DataBayiController::class, 'update'])->name('data-bayi.update');
 Route::delete('/data-bayi/{id}', [DataBayiController::class, 'destroy'])->name('data-bayi.destroy');
+
 //jadwal
 Route::get('data_jadwal', [JadwalController::class, 'index'])->name('jadwal');
 Route::post('/storejadwal', [JadwalController::class, 'store'])->name('storejadwal');
 Route::get('/data-jadwal/{id}/edit', [JadwalController::class, 'edit'])->name('data-jadwal.edit');
 Route::post('/data-jadwal/{id}/update', [JadwalController::class, 'update'])->name('data-jadwal.update');
 Route::delete('/data-jadwal/{id}', [JadwalController::class, 'destroy'])->name('data-jadwal.destroy');
+=======
+//data user
+Route::get('data_user', [DataUserController::class, 'index'])->name('user');
+Route::post('store/user', [DataUserController::class, 'store'])->name('storeUser');
+Route::get('/data-user/{id}/edit', [DataUserController::class, 'edit'])->name('data-user.edit');
+Route::post('/data-user/{id}/update', [DataUserController::class, 'update'])->name('data-user.update');
+Route::delete('/data-user/{id}', [DataUserController::class, 'destroy'])->name('data-user.destroy');
+
