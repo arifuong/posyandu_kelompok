@@ -11,28 +11,28 @@
             <div class="card">
                 <div class="card-header">Edit Data Jadwal</div>
                 <div class="card-body">
-                    <form method="POST" action="{{ route('data-jadwal.update', $datajadwal->id) }}">
+                    <form method="POST" action="{{ route('data-jadwal.update', $data->id) }}">
                         @csrf
                         @method('POST')
                         <div class="form-group">
                             <label for="namajadwal">Nama Jadwal</label>
-                            <input type="text" id="NIK" name="NIK" class="form-control" value="{{ $datajadwal->namajadwal }}">
+                            <input type="text" id="namajadwal" name="namajadwal" class="form-control" value="{{ $data->namajadwal }}">
                         </div>
                         <div class="form-group">
                             <label for="tanggal">Tanggal</label>
-                            <input type="date" id="tanggal" name="tanggal" class="form-control" value="{{ $datajadwal->tanggal }}">
+                            <input type="date" id="tanggal" name="tanggal" class="form-control" value="{{ $data->tanggal }}">
                         </div>
                         <div class="form-group">
                             <label for="keterangan">Keterangan</label>
-                            <input type="text" id="keterangan" name="keterangan" class="form-control" value="{{ $datajadwal->keterangan }}">
+                            <input type="text" id="keterangan" name="keterangan" class="form-control" value="{{ $data->keterangan }}">
                         </div>
                         <div class="form-group">
                             <label for="khusus">Khusus</label>
-                            <input type="text" id="khusus" name="khusus" class="form-control" value="{{ $datajadwal->khusus }}">
+                            <input type="text" id="khusus" name="khusus" class="form-control" value="{{ $data->khusus }}">
                         </div>
                         <div class="form-group">
                             <label for="created_at">Tanggal di buat</label>
-                            <input type="date" id="created_at" name="created_at" class="created_at" value="{{ $datajadwal->create_at }}">
+                            <input type="date" id="created_at" name="created_at" class="created_at" value="{{ $data->created_at }}">
                         </div>
                         <div class="form-group mt-3">
                             <button type="submit" class="btn btn-primary">Update Data</button>
