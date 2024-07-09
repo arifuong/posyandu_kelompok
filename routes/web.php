@@ -45,7 +45,7 @@ Route::post('/storejadwal', [JadwalController::class, 'store'])->name('storejadw
 Route::get('/data-jadwal/{id}/edit', [JadwalController::class, 'edit'])->name('data-jadwal.edit');
 Route::post('/data-jadwal/{id}/update', [JadwalController::class, 'update'])->name('data-jadwal.update');
 Route::delete('/data-jadwal/{id}', [JadwalController::class, 'destroy'])->name('data-jadwal.destroy');
-=======
+
 //data user
 Route::get('data_user', [DataUserController::class, 'index'])->name('user');
 Route::post('store/user', [DataUserController::class, 'store'])->name('storeUser');
