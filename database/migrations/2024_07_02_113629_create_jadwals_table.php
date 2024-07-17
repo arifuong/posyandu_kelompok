@@ -17,7 +17,6 @@ return new class extends Migration
             $table->date('tanggal');
             $table->string('keterangan');
             $table->string('khusus');
-            $table->date('created_at');
             $table->timestamps();
         });
     }

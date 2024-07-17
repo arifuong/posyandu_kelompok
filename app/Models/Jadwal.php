@@ -14,6 +14,5 @@ class Jadwal extends Model
         'tanggal',
         'keterangan',
         'khusus',
-        'created_at'
     ];
 }

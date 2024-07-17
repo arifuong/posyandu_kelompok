@@ -8,14 +8,28 @@
     <style>
         body {
             width: 100%;
-            background-color: #f8f9fa;
+            background-image: url('{{ asset('img/p5.jpg') }}');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            color: #fff;
         }
         .container {
-            margin-top: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin-top: 10px;
         }
         .card {
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             border-radius: 10px;
+            width: 500px;
+            height: 500px;
+            background-color: rgba(255, 255, 255, 0.8); /* Transparent white background */
         }
         .card h2 {
             color: #007bff;
@@ -41,27 +55,34 @@
         small {
             color: #6c757d;
         }
+        .card-header {
+            background-color: rgba(0, 0, 0, 0.1); /* Transparent black header */
+            border-bottom: none;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            padding: 0.5rem 1rem;
+        }
+        .card-header h2 {
+            margin-bottom: 0;
+        }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="d-flex justify-content-center mt-5">
-                <h1 class="text-center">Selamat Datang Posyandu Online</h1>
-            </div>
-            <div class="col-md-4 mt-5">
-                <div class="card">
-                    <div class="text-center mt-3">
-                        <h2>Login</h2>
+    <div class="container h-100">
+        <div class="row h-50">
+            <div class="col-md-10">
+                <div class="card mx-auto">
+                    <div class="card-header">
+                        <h2 class="text-center">Login</h2>
                     </div>
                     <div class="card-body">
                         <form action="{{ route('aclogin') }}" method="POST">
                             @csrf
-                            <div class="mb-3">
+                            <div class="mb-4">
                                 <label for="username" class="form-label">Username</label>
                                 <input type="text" class="form-control" id="username" name="username" placeholder="Enter your username">
                             </div>
-                            <div class="mb-3">
+                            <div class="mb-5">
                                 <label for="password" class="form-label">Password</label>
                                 <input type="password" class="form-control" id="password" name="password" placeholder="Enter your password">
                             </div>
@@ -70,7 +91,7 @@
                             </div>
                         </form>
                     </div>
-                    <div class="text-center mt-3 mb-3">
+                    <div class="card-footer text-center">
                         <small>&copy; 2024 mohamad arifin hasbi</small>
                     </div>
                 </div>

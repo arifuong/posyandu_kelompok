@@ -9,6 +9,13 @@
     <!-- Select2 Bootstrap 5 Theme CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <style>
+        body {
+            background-image: url('{{ asset('img/p.png') }}');
+            background-size: cover;
+            background-position: c ;
+            background-repeat: no-repeat;
+            color: #fff; /* Warna teks putih agar kontras dengan latar belakang */
+        }
         .select2-container--bootstrap4 .select2-selection--single {
             border: 1px solid black; /* Ganti warna dan ketebalan sesuai kebutuhan */
             border-radius: 10px;
@@ -16,10 +23,37 @@
             display: flex;
             align-items: center;
         }
+        .select2-container--bootstrap4 .select2-selection--single .select2-selection__rendered {
+            color: #050505; /* Warna teks */
+            line-height: 48px; /* Tinggi baris */
+            padding-left: 1rem; /* Padding kiri */
+        }
+        .select2-container--bootstrap4 .select2-selection--single .select2-selection__arrow {
+            height: 48px; /* Tinggi panah */
+        }
+        <style>
+    #dataibu {
+        margin-top: 20px;
+        padding: 10px;
+        background-color: #0080ff;
+        border: 1px solid #000000;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    #dataibu h5 {
+        color: #007bff;
+        margin-bottom: 10px;
+    }
+
+    #dataibu p {
+        margin-bottom: 5px;
+        color: #050505;
+    }
     </style>
 </head>
 <body>
-    <div class="container mt-5">
+    <div class="container m-5 py-5 p-auto">
         <a href="{{ route('cek/ibu') }}" class="btn btn-dark">Cek data Ibu</a>
         <a href="{{ route('login') }}" class="btn btn-primary">Login</a>
         <div class="row">
