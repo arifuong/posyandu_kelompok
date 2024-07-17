@@ -20,7 +20,7 @@ Route::get('/api/data-bayi/{nik}', [userController::class, 'getDataByNik2']);
 Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login');
 Route::post('/login/post', [AuthController::class, 'login'])->name('aclogin');
 
-Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+Route::any('/logout', [AuthController::class, 'logout'])->name('logout');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
