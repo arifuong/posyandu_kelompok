@@ -20,7 +20,7 @@
         border: 1px solid #ccc; /* Warna border form */
         color: #000; /* Warna teks */
     }
-    
+
     .form-control:focus {
         background-color: #fff; /* Warna latar belakang saat fokus */
         border-color: #5cb85c; /* Warna border saat fokus */
@@ -36,7 +36,7 @@
                 <div class="card-body">
                     <form method="POST" action="{{ route('data-jadwal.update', $data->id) }}">
                         @csrf
-                        @method('PUT') <!-- Menggunakan PUT untuk method update -->
+                        @method('post') <!-- Menggunakan PUT untuk method update -->
 
                         <div class="form-group">
                             <label for="namajadwal">Nama Jadwal</label>

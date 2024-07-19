@@ -27,7 +27,7 @@ class JadwalController extends Controller
             'tanggal' => $request->get('tanggal'),
             'keterangan' => $request->get('keterangan'),
             'khusus' => $request->get('khusus'),
-           
+
         ]);
 
         $data->save();
@@ -56,7 +56,7 @@ class JadwalController extends Controller
             'tanggal' => $request->get('tanggal'),
             'keterangan' => $request->get('keterangan'),
             'khusus' => $request->get('khusus'),
-           
+
         ]);
 
         return redirect()->route('jadwal')->with('success', 'Jadwal berhasil diperbarui');
